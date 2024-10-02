@@ -72,4 +72,15 @@ contract BetFutebol{
         payable(owner).transfer(comission);   // transferencia automatica para conta do dono. a comissão dele. o criador da Bet.
 
     }
+
+    function claim() external {
+        Bet memory userBet = allBets[msg.sender];
+        require(dispute.winner > 0 && dispute.winner == userBet.candidate && userBet.claimed == 0, "Invalide claim");
+        uint winnerAmount = dispute.winner == 1 ? dispute.total1 : dispute.total2;
+        uint ratio = (userBet.amount * 1e4) / winnerAmount;
+        uint individualPrize = netPrize * ratio / 1e4;
+        allBets[msg.sender].claimed = individualPrize;
+        payable(msg.sender).transfer(induvidualPrize);
+    }
+    
 }
