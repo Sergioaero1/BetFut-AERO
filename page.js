@@ -1,43 +1,44 @@
-"use client"
-
+import { Span } from "next/dist/trace";
 import Head from "next/head";
-import {useRouter} from "next/navigation";
 
 export default function Home() {
-
-  const{ push } = useRouter();
-
-  function btnLoginClick() {
-    push("/pag2");
-  }
-
   return (
     <>
     <Head>
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <tittle>BetFutebol | Login</tittle>
+      <tittle>BetFutebol | Apostar</tittle>
     </Head>
     <div className="container px-4 py-5">
-      <div className="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div className="col-6">
-
-         <img src="./Aerinho3-700-500.png" alt="escudo do time" className="d-block mx-lg-auto img-fluid" width="700" height="500"/>
-        </div>
-  
-        <div className="col-6">
-          <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">BetFutebol</h1>
+      <div className="row align-items-center">
+      <h1 className="display-5 fw-bold text-body-emphasis lh-1 mb-3">BetFutebol</h1>
           <p className="lead">Aposta No Vencedor</p>
-          <p className="lead">Autentique-se com sua carteira e deixe sua aposta para a proxima disputa</p>
-          <div className="d-flex justify-content-start">
-            <button type="button" className="btn btn-primary btn-lg px-4" onClick={btnLoginClick}>
-              <img src="./60-60-.png" width={60} className="me-3"
-              />
-              Conectar Metamask
-            </button>
-            <p className="message"></p>
-          </div>
+          <p className="lead">DATA DO SORTEIO: 22/12/2025</p>
+      </div>
+
+      <div className="row flex-lg-row-reverse align-items-center g-1 py-5">
+        <div className="col"></div>
+        <div className="col">
+            <h3 className="my-2 d-block mx-auto" style={{width: 250}}>
+                FLAMENGO
+            </h3>
+            <img src="/src/app/Aerinho3.png" className="d-block mx-auto img-fluid rounded" width={250}></img>
+            <button className="btn btn-primary p-3 my-2 d-block mx-auto" style={{width: 250}}>Aposto nesse clube</button>
+            <span className="badge text-bg-secundary d-block mx-auto" style={{width: 250}}>0 Pol Apostados</span>
         </div>
+
+        <div className="col">
+            <h3 className="my-2 d-block mx-auto" style={{width: 250}}>
+                SPFC
+            </h3>
+            <img src="/src/app/Aerinho3.png" className="d-block mx-auto img-fluid rounded" width={250}></img>
+            <button className="btn btn-primary p-3 my-2 d-block mx-auto" style={{width: 250}}>Aposto nesse clube</button>
+            <span className="badge text-bg-secundary d-block mx-auto" style={{width: 250}}>0 Pol Apostados</span>
+        </div>
+      </div>
+
+      <div className="row align-items-center">
+        <p className="message"></p>
       </div>
 
       <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 mx-4 border-top">
