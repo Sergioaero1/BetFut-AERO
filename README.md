@@ -4,6 +4,6 @@
 
 ##  back end avançado já, estou terminando o front-end... 
 
-# Ferramentas: SOLIDITY; REMIX IDE; VC Code; JS
+# Ferramentas: SOLIDITY; REMIX IDE; VC Code;CSS3; JS
 
 # PROFESSOR LuizTool: https://www.luiztools.com.br/w3w-1.html
