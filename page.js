@@ -7,7 +7,7 @@ export default function Home() {
     <Head>
       <meta charSet="utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1"/>
-      <tittle>BetFutebol | Apostar</tittle>
+      <tittle>BetFutebol | Apostas</tittle>
     </Head>
     <div className="container px-4 py-5">
       <div className="row align-items-center">

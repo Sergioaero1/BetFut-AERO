@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+ //SPDX-License-Identifier: MIT
 pragma solidity 0.8.26;
 
 struct Bet {
@@ -22,7 +22,7 @@ contract BetFutebol{
 
     Dispute public  dispute; //Tipos de dados, Contratos, sempre começam com letra maiúscola / Variáveis sempre começam com letra minúscula
 
-    mapping(address => Bet) public allBets; // mapping, tipo de dado baseado e chave-valor (=>), uma chave que é um indice de pesquisa que leva até uma estrutura de dados com todas info que qieremos - como se fosse um dicionario.
+    mapping(address => Bet) public allBets; // mapping, tipo de dado baseado e chave-valor (=>), uma chave que é um indice de pesquisa que leva até uma estrutura de dados com todas info que queieramos - como se fosse um dicionario.
             // A variável "allBets" vai guardar todas as apostas
     address owner;  // Dono do contrato
     uint fee = 1000; // Comissão da casa? 10%, com escala de 4 zeros
@@ -80,7 +80,7 @@ contract BetFutebol{
         uint ratio = (userBet.amount * 1e4) / winnerAmount;
         uint individualPrize = netPrize * ratio / 1e4;
         allBets[msg.sender].claimed = individualPrize;
-        payable(msg.sender).transfer(induvidualPrize);
+        payable(msg.sender).transfer(individualPrize);
     }
     
 }
