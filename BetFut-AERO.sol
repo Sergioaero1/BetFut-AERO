@@ -79,7 +79,7 @@ contract BetFutebol{
         uint winnerAmount = dispute.winner == 1 ? dispute.total1 : dispute.total2;
         uint ratio = (userBet.amount * 1e4) / winnerAmount;
         uint individualPrize = netPrize * ratio / 1e4;
-        allBets[msg.sender].claimed = individualPrize;
+        allBets[msg.sender].claimed  = individualPrize;
         payable(msg.sender).transfer(individualPrize);
     }
     
